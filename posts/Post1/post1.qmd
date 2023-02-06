@@ -1,16 +1,62 @@
 ---
-title: "Effect of Yoga on Screentime"
+title: "Rats!"
+image: "ratty.jpg"
 editor: visual 
 html:
   code-fold: true
   code-summary: "Show the code"
-categories: [Analysis]
+categories: [Analysis, Survival Analysis, Data Visualization]
 ---
+#Credit to MH Gail, TJ Santner, and CC Brown (1980). "An analysis of comparative carcinogenesis experiments based on multiple times to tumor". Biometrics 36, 255–266.
 ```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
+# install.packages("wesanderson")
 library(tidyverse)
+library(lubridate)
+library(skimr)
+library(survival)
+library(survminer)
+library(wesanderson)
+library(hrbrthemes) # for plot themes
+library(gapminder) # for data
+library(ggbump) # for the bump plot
 ```
 
 ```{r}
-setwd("C:\\Users\\Steven\\Desktop\\Howley_Steven_Portfolio\\posts\\Post1\\post1data")
-ds<-read_csv("Screen Time Data.csv")
+#| echo: false
+#| message: false
+#| warning: false
+
+rats2.2=rats2 %>%
+    mutate(timeElapsed=time2-time1) %>%
+    group_by(id,trt) %>%
+    summarize(timeElapsed=max(timeElapsed,na.rm=T),status=max(status,na.rm=T))
+
+survObj<-Surv(rats2.2$timeElapsed, rats2.2$status)
+
+km<-survfit(survObj~rats2.2$trt)
+
+
+gsp<-ggsurvplot(fit=km,
+         data=rats2.2,
+         risk.table = F,
+         conf.int = T,
+         legend="right",
+         surv.median.line = "hv",
+         palette = wes_palette("GrandBudapest2"))+
+labs(
+  title="Survival Curves for Rat Data from Gail et al."
+  )
+
+g<-gsp$plot
+
+g+theme_bw()
+
+(survD<-survdiff(formula=survObj~rats2.2$trt))
 ```
+
+The survival curves illustrate the different survival outcomes between rats in the control group, trt=0, and those who received treatment, trt=1. To determine whether the hazard functions of the 2 groups are statistically significant, a log-rank test is performed, and the resulting p-value provides sufficient evidence to reject the null hypotheses, implying that treatment was effective.
