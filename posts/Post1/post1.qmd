@@ -1,0 +1,16 @@
+---
+title: "Effect of Yoga on Screentime"
+editor: visual 
+html:
+  code-fold: true
+  code-summary: "Show the code"
+categories: [Analysis]
+---
+```{r}
+library(tidyverse)
+```
+
+```{r}
+setwd("C:\\Users\\Steven\\Desktop\\Howley_Steven_Portfolio\\posts\\Post1\\post1data")
+ds<-read_csv("Screen Time Data.csv")
+```
