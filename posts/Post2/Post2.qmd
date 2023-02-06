@@ -7,19 +7,36 @@ html:
   code-summary: "Show the code"
 categories: [Analysis, Tidy Tuesday]
 ---
+Where does the fastest cat in the UK like to hang out?
+
+
+Credit to: Kays R, Dunn RR, Parsons AW, Mcdonald B, Perkins T, Powers S, Shell L, McDonald JL, Cole H, Kikillus H, Woods L, Tindle H, Roetman P (2020) The small home ranges and large local ecological impacts of pet cats. Animal Conservation. doi:10.1111/acv.12563
+
+This post was inspired by the Tidy Tuesday submission for 2023-01-31.
+
 ```{r}
 #| echo: false
 #| include: false
 #| message: false
 #| warning: false
 
+#install.packages("devtools")
+#devtools::install_github("tidyverse/tidyr")
 library(tidytuesdayR)
 library(tidyverse)
 library(here)
 library(janitor)
+library(tidyr)
+library(stringr)
+library(dplyr)
+library(leaflet)
 ```
 
 ```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
 # Get the Data
 
 # Read in with tidytuesdayR package 
@@ -32,10 +49,37 @@ tuesdata<-tidytuesdayR::tt_load('2023-01-31')
 tuesdata<-tidytuesdayR::tt_load(2023, week = 5)
 
 cats_uk <- tuesdata$cats_uk
-cats_uk_reference <- tuesdata$cats_uk_reference
+#cats_uk_reference <- tuesdata$cats_uk_reference
 
 # Or read in the data manually
 
 cats_uk <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk.csv')
-cats_uk_reference <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk_reference.csv')
+#cats_uk_reference <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk_reference.csv')
 ```
+
+```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
+unique(cats_uk$ground_speed)
+
+max(cats_uk$ground_speed)
+cats_uk %>%
+  filter(ground_speed==277092)
+
+g2_t<-cats_uk %>%
+  filter(tag_id=="Gracie_2-Tag")
+```
+
+```{r}
+leaflet()%>% 
+  addProviderTiles("OpenStreetMap.Mapnik") %>% 
+  addCircleMarkers(lng=g2_t$location_long,
+                   lat=g2_t$location_lat,
+                   popup = timestamp,
+                   color="purple",radius = 2)
+```
+
+The cat with the tag Gracie_2 was found to be the cat with the highest ground speed in this study. Her location information is plotted in a simple leaflet map. She appears to reside in Camborne mainly but can be found in the surrounding areas as well.
