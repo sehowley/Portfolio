@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Steven Howley’s Portfolio",
+    "section": "",
+    "text": "Rats!\n\n\n\n\n\n\n\nAnalysis\n\n\nSurvival Analysis\n\n\nData Visualization\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCats!\n\n\n\n\n\n\n\nAnalysis\n\n\nTidy Tuesday\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Post1/post1.html",
+    "href": "posts/Post1/post1.html",
+    "title": "Rats!",
+    "section": "",
+    "text": "Credit to MH Gail, TJ Santner, and CC Brown (1980). “An analysis of comparative carcinogenesis experiments based on multiple times to tumor”. Biometrics 36, 255–266.\n\n\n\n\n\nCall:\nsurvdiff(formula = survObj ~ rats2.2$trt)\n\n               N Observed Expected (O-E)^2/E (O-E)^2/V\nrats2.2$trt=0 25       25     17.3      3.37      6.12\nrats2.2$trt=1 23       21     28.7      2.04      6.12\n\n Chisq= 6.1  on 1 degrees of freedom, p= 0.01 \n\n\nThe survival curves illustrate the different survival outcomes between rats in the control group, trt=0, and those who received treatment, trt=1. To determine whether the hazard functions of the 2 groups are statistically significant, a log-rank test is performed, and the resulting p-value provides sufficient evidence to reject the null hypotheses, implying that treatment was effective."
+  },
+  {
+    "objectID": "posts/Post2/Post2.html",
+    "href": "posts/Post2/Post2.html",
+    "title": "Cats!",
+    "section": "",
+    "text": "Where does the fastest cat in the UK like to hang out?\nCredit to: Kays R, Dunn RR, Parsons AW, Mcdonald B, Perkins T, Powers S, Shell L, McDonald JL, Cole H, Kikillus H, Woods L, Tindle H, Roetman P (2020) The small home ranges and large local ecological impacts of pet cats. Animal Conservation. doi:10.1111/acv.12563\nThis post was inspired by the Tidy Tuesday submission for 2023-01-31.\n\n\n\n\nleaflet()%>% \n  addProviderTiles(\"OpenStreetMap.Mapnik\") %>% \n  addCircleMarkers(lng=g2_t$location_long,\n                   lat=g2_t$location_lat,\n                   popup = timestamp,\n                   color=\"purple\",radius = 2)\n\n\n\n\n\nThe cat with the tag Gracie_2 was found to be the cat with the highest ground speed in this study. Her location information is plotted in a simple leaflet map. She appears to reside in Camborne mainly but can be found in the surrounding areas as well."
+  }
+]

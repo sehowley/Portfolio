@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Steven Howley - Cats!</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="../../site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="../../site_libs/jquery-1.12.4/jquery.min.js"></script>
+<link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-binding-2.1.1/leaflet.js"></script>
+<script src="../../site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="../../site_libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Steven Howley</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Cats!</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Analysis</div>
+    <div class="quarto-category">Tidy Tuesday</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Where does the fastest cat in the UK like to hang out?</p>
+<p>Credit to: Kays R, Dunn RR, Parsons AW, Mcdonald B, Perkins T, Powers S, Shell L, McDonald JL, Cole H, Kikillus H, Woods L, Tindle H, Roetman P (2020) The small home ranges and large local ecological impacts of pet cats. Animal Conservation. doi:10.1111/acv.12563</p>
+<p>This post was inspired by the Tidy Tuesday submission for 2023-01-31.</p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>()<span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(<span class="st">"OpenStreetMap.Mapnik"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(<span class="at">lng=</span>g2_t<span class="sc">$</span>location_long,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">lat=</span>g2_t<span class="sc">$</span>location_lat,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">popup =</span> timestamp,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span><span class="st">"purple"</span>,<span class="at">radius =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="htmlwidget-e0059a0da8884e95caa5" style="width:100%;height:464px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e0059a0da8884e95caa5">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[50.209122,50.212078,50.212078,50.209332,50.209332,50.209526,50.209896,50.209896,50.210098,50.209713,50.209713,50.209915,50.209812,50.209599,50.209644,50.209644,50.209972,50.209911,50.209816,50.209667,50.209671,50.209816,50.209911,50.209915,50.209949,50.209946,50.209797,50.209869,50.209381,50.210041,50.209862,50.210003,50.209843,50.2099,50.209511,50.207588,50.209892,50.210129,50.210373,50.209969,50.209801,50.210575,50.210575,50.209797,50.20969,50.20969,50.212208,50.211422,50.211422,50.209743,50.209759,50.209888,50.20993,50.209885,50.209648,50.209717,50.209721,50.209927,50.209778,50.209866,50.20977,50.209805,50.209747,50.209812,50.209805,50.209766,50.209763,50.209702,50.209679,50.209709,50.209709,50.209766,50.209652,50.208633,50.209732,50.209743,50.209785,50.209667,50.209797,50.209824,50.210812,50.209869,50.209801,50.209824,50.209705,50.209835,50.209648,50.209831,50.213646,50.209827,50.209827,50.209801,50.209835,50.209835,50.209717,50.209648,50.210018,50.209209,50.209221,50.210682,50.209888,50.209412,50.209679,50.209709,50.20956,50.209614,50.20977,50.209667,50.20974,50.209789,50.209721,50.209763,50.209721,50.209797,50.209682,50.209766,50.209835,50.209785,50.209553,50.20982,50.209793,50.20969,50.20966,50.209702,50.209675,50.20969,50.209759,50.209751,50.209751,50.209721,50.20969,50.209702,50.209686,50.209736,50.209766,50.209843,50.209854,50.209793,50.209892,50.209755,50.209694,50.209816,50.209778,50.210304,50.209671,50.209671,50.209759,50.209759,50.209942,50.209942,50.209839,50.209858,50.209873,50.21188,50.21188,50.209774,50.209774,50.210087,50.20792,50.20792,50.209724,50.209816,50.216679,50.209984,50.210037,50.209789,50.209789,50.209961,50.209801,50.209801,50.209652,50.209492,50.209251,50.209511,50.209846,50.21014,50.212379,50.209801,50.209797,50.209797,50.20982,50.209869,50.210091,50.210091,50.209679,50.209885,50.209885,50.209869,50.210163,50.210068,50.21032,50.210087,50.210144,50.20998,50.210129,50.210068,50.210083,50.210079,50.210297,50.209999,50.210052,50.210091,50.210026,50.210182,50.210133,50.210117,50.20998,50.210068,50.210068,50.210075,50.209995,50.209942,50.21003,50.210106,50.210007,50.209854,50.20977,50.209496,50.209705,50.209877,50.209267,50.209618,50.209694,50.209137,50.209137,50.209896,50.209896,50.210014,50.209282,50.209339,50.210167,50.20871,50.209591,50.209522,50.209728,50.209736,50.209824,50.209713,50.209751,50.209766,50.209751,50.209797,50.209789,50.209743,50.209797,50.209751,50.209709,50.20966,50.209717,50.209743,50.209709,50.209743,50.209732,50.209576,50.209747,50.209721,50.209606,50.209736,50.209663,50.209698,50.209824,50.209755,50.20974,50.209721,50.209709,50.209656,50.209862,50.209854,50.209648,50.209606,50.209702,50.209763,50.209824,50.209766,50.209686,50.20977,50.209927,50.209724,50.209538,50.209881,50.209953,50.209953,50.209694,50.209881,50.209743,50.210049,50.209785,50.209785,50.209534,50.209717,50.20977,50.209854,50.209751,50.209694,50.209747,50.209736,50.209991,50.209961,50.209694,50.20966,50.209789,50.209797,50.211079,50.216141,50.216141,50.211166,50.213657,50.213657,50.210941,50.21003,50.210033,50.210064,50.210049,50.210087,50.210037,50.210026,50.210022,50.210102,50.209785,50.209877,50.209717,50.209805,50.209835,50.209736,50.209782,50.209782,50.20977,50.20977,50.209522,50.209522,50.209839,50.209679,50.209953,50.209953,50.209873,50.209808,50.209808,50.20969,50.209782,50.21019,50.210152,50.21035,50.210228,50.210316,50.210224,50.210194,50.210205,50.210087,50.210186,50.207367,50.210411,50.210369,50.210266,50.210018,50.210144,50.210178,50.210377,50.210136,50.210251,50.210457,50.210335,50.210304,50.210144,50.210243,50.21003,50.210346,50.21022,50.210163,50.210091,50.209881,50.210094,50.209991,50.209862,50.209621,50.209702,50.209816,50.20982,50.209686,50.209789,50.209789,50.209034,50.209034,50.209961,50.209961,50.208118,50.208118,50.209854,50.210133,50.209625,50.2094,50.210045,50.210045,50.209759,50.209942,50.210239,50.210239,50.209984,50.20982,50.209835,50.209652,50.20977,50.20974,50.20985,50.209812,50.209785,50.20974,50.209858,50.209957,50.209717,50.209911,50.209877,50.209721,50.209599,50.209782,50.209667,50.209553,50.209614,50.209461,50.209801,50.20974,50.209606,50.206711,50.208824,50.20871,50.208725,50.209709,50.209835,50.209755,50.209919,50.209808,50.209763,50.209797,50.20977,50.209698,50.209728,50.209713,50.209702,50.209759,50.209717,50.209801,50.209656,50.209682,50.209797,50.209728,50.209789,50.209774,50.209663,50.209549,50.209469,50.209885,50.209743,50.209778,50.209763,50.209717,50.209839,50.209553,50.209553,50.209797,50.209736,50.209759,50.209248,50.209553,50.209763,50.210617,50.210976,50.210091,50.209904,50.21011,50.209091,50.209072,50.20961,50.209648,50.209557,50.209557,50.209759,50.209759,50.209782,50.209881,50.210186,50.209557,50.209618,50.210327,50.209507,50.210087,50.209869,50.209892,50.209927,50.209972,50.209957,50.209904,50.209949,50.210182,50.209862,50.209869,50.209911,50.2099,50.2099,50.209736,50.209755,50.209755,50.209805,50.209732,50.209785,50.209724,50.209648,50.209591,50.209652,50.20966,50.209778,50.209614,50.209778,50.209793,50.209885,50.209972,50.209827,50.209942,50.209927,50.209705,50.209698,50.209721,50.209824,50.209785,50.209778,50.209984,50.209751,50.209793,50.209698,50.209698,50.209755,50.209778,50.210159,50.209602,50.209778,50.209618,50.209755,50.210121,50.210125,50.210068,50.210079,50.210102,50.210102,50.21003,50.210155,50.210083,50.209648,50.209675,50.209656,50.209312,50.209908,50.209808,50.209545,50.209724,50.209736,50.210232,50.209614,50.209827,50.20982,50.209835,50.209888,50.209885,50.209888,50.209957,50.209888,50.209835,50.210117,50.209831,50.209766,50.209908,50.209671,50.209446,50.209602,50.209797,50.20974,50.209736,50.209736,50.209816,50.209846,50.210052,50.210052,50.181923,50.209793,50.209843,50.209908,50.209908,50.210155,50.21032,50.21032,50.210232,50.20998,50.210098,50.334026,50.334026,50.209736,50.209732,50.209259,50.208721,50.209717,50.209343,50.209759,50.209557,50.209663,50.209492,50.209675,50.209534,50.209717,50.209843,50.209686,50.209869,50.209637,50.209839,50.209846,50.209599,50.209778,50.209831,50.209763,50.209732,50.209805,50.20974,50.209721,50.209728,50.209782,50.209763,50.209835,50.209785,50.209843,50.209743,50.209846,50.209751,50.209801,50.209751,50.209747,50.209686,50.209679,50.209656,50.20969,50.209702,50.209702,50.209915,50.20924,50.210064,50.210064,50.209591,50.209896,50.20982,50.209988,50.209702,50.209873,50.209846,50.209583,50.209583,50.209782,50.210323,50.210178,50.209858,50.209911,50.209911,50.209435,50.209435,50.209679,50.209633,50.209633,50.209286,50.209286,50.219337,50.219337,50.209816,50.209843,50.209843,50.209743,50.209835,50.20982,50.209908,50.209908,50.209541,50.209728,50.209728,50.209763,50.209782,50.209671,50.209732,50.209724,50.209827,50.209831,50.209831,50.20977,50.209965,50.211658,50.20982,50.209282,50.209957,50.209957,50.209648,50.209805,50.209969,50.209785,50.209614,50.209068,50.209042,50.209797,50.209797,50.20977,50.209846,50.209824,50.209724,50.209724,50.209644,50.209946,50.209743,50.209904,50.209904,50.209641,50.210266,50.210266,50.209587,50.209587,50.210224,50.209732,50.209717,50.209717,50.209969,50.209969,50.209831,50.209831,50.209881,50.204712,50.209885,50.210018,50.209957,50.209839,50.20998,50.209915,50.210033,50.209953,50.209988,50.209938,50.209969,50.209953,50.210037,50.209919,50.209957,50.209942,50.20993,50.210026,50.209904,50.210072,50.210003,50.209961,50.20998,50.209881,50.209793,50.209846,50.209843,50.209866,50.209713,50.20977,50.209805,50.209774,50.210072,50.209759,50.209766,50.209766,50.209824,50.209705,50.209938,50.209923,50.210503,50.209824,50.209824,50.20974,50.209732,50.209724,50.209888,50.209698,50.209682,50.209721,50.209644,50.209682,50.209656,50.209793,50.20974,50.209743,50.209774,50.209797,50.209717,50.209652,50.209682,50.209885,50.20974,50.209805,50.209702,50.20985,50.209961,50.209736,50.209743,50.209721,50.209839,50.209862,50.209934,50.20982,50.209667,50.20974,50.20982,50.209766,50.209816,50.209793,50.209816,50.209835,50.209732,50.209724,50.209717,50.209778,50.20974,50.209755,50.209785,50.209736,50.209763,50.209782,50.209766,50.209774,50.20982,50.20982,50.209755,50.20974,50.209885,50.209736,50.209866,50.209633,50.209785,50.209843,50.209824,50.209824,50.207909,50.207909,50.209801,50.209831,50.210056,50.210182,50.210075,50.210308,50.210144,50.209785,50.210274,50.209709,50.209568,50.209785,50.209526,50.209698,50.209698,50.209717,50.209717,50.209774,50.209782,50.209656,50.209686,50.209888,50.209473,50.209473,50.20993,50.209766,50.209755,50.20969,50.222836,50.222836,50.209751,50.209934,50.209888,50.209888,50.210934,50.209705,50.210064,50.209835,50.20985,50.209911,50.210182,50.210041,50.210011,50.210106,50.210167,50.21006,50.210049,50.209789,50.209736,50.209957,50.209675,50.209663,50.209553,50.209782,50.20911,50.209503,50.209663,50.209743,50.209435,50.209717,50.209717,50.210632,50.209488,50.209839,50.209824,50.209824,50.209812,50.209679,50.209816,50.209789,50.209827,50.209709,50.209797,50.209896,50.209648,50.209793,50.209667,50.209621,50.209736,50.209854,50.209831,50.209663,50.209961,50.209873,50.209858,50.209938,50.209984,50.209938,50.209953,50.20993,50.209965,50.209957,50.209919,50.209892,50.209919,50.209972,50.209988,50.209976,50.209991,50.21003,50.209976,50.209972,50.209911,50.209965,50.210003,50.209965,50.20993,50.210011,50.210011,50.209923,50.209824,50.210007,50.210007,50.209873,50.209824,50.209763,50.209766,50.209766,50.209671,50.209671,50.209862,50.209908,50.209908,50.209846,50.209846,50.209675,50.209858,50.209858,50.20966,50.209675],[-5.293484,-5.294076,-5.294076,-5.294458,-5.294458,-5.29424,-5.29311,-5.29311,-5.293453,-5.293965,-5.293965,-5.29425,-5.293782,-5.293846,-5.293598,-5.293598,-5.293323,-5.294185,-5.293795,-5.29354,-5.293632,-5.293831,-5.293794,-5.293787,-5.293797,-5.293803,-5.293422,-5.293556,-5.293438,-5.293848,-5.29346,-5.293585,-5.293504,-5.29351,-5.293404,-5.293272,-5.293397,-5.293334,-5.293604,-5.293498,-5.293539,-5.293962,-5.293962,-5.293623,-5.29371,-5.29371,-5.295241,-5.294765,-5.294765,-5.293506,-5.293542,-5.293759,-5.293687,-5.29368,-5.293855,-5.293691,-5.29302,-5.293625,-5.293628,-5.293061,-5.293698,-5.293489,-5.293837,-5.293615,-5.293739,-5.293992,-5.293636,-5.293603,-5.29366,-5.29362,-5.293639,-5.29376,-5.293513,-5.292574,-5.293659,-5.293751,-5.293596,-5.293861,-5.293808,-5.293463,-5.29353,-5.293882,-5.293741,-5.293737,-5.293782,-5.29389,-5.293596,-5.293585,-5.293236,-5.293664,-5.293738,-5.293733,-5.29382,-5.293809,-5.293663,-5.293791,-5.29365,-5.294061,-5.293773,-5.29395,-5.293585,-5.293603,-5.293527,-5.293582,-5.293558,-5.293661,-5.293573,-5.293701,-5.293556,-5.293602,-5.293577,-5.293687,-5.293389,-5.293773,-5.293395,-5.293727,-5.293653,-5.29359,-5.293359,-5.293681,-5.293657,-5.293419,-5.293443,-5.293459,-5.29348,-5.293485,-5.293586,-5.293592,-5.293594,-5.293609,-5.293521,-5.293464,-5.293516,-5.293567,-5.293695,-5.293823,-5.293743,-5.293724,-5.293812,-5.29381,-5.29347,-5.293851,-5.293693,-5.293355,-5.293839,-5.293839,-5.293671,-5.293671,-5.293731,-5.293731,-5.293487,-5.293862,-5.293732,-5.306871,-5.306871,-5.293751,-5.293751,-5.293569,-5.295237,-5.295237,-5.293571,-5.293794,-5.294639,-5.294009,-5.293499,-5.293684,-5.293684,-5.293772,-5.293231,-5.293231,-5.293575,-5.293072,-5.294052,-5.293938,-5.29397,-5.293663,-5.293475,-5.293639,-5.293429,-5.293429,-5.293162,-5.29339,-5.293211,-5.293211,-5.293915,-5.293881,-5.293881,-5.293782,-5.293512,-5.293385,-5.293873,-5.293352,-5.293703,-5.293933,-5.293424,-5.293421,-5.293496,-5.29351,-5.293543,-5.29303,-5.293233,-5.293302,-5.293115,-5.293227,-5.293292,-5.293223,-5.293163,-5.293185,-5.293289,-5.293261,-5.293213,-5.29312,-5.29324,-5.293247,-5.293235,-5.293841,-5.293858,-5.293541,-5.293772,-5.293699,-5.293815,-5.293701,-5.293955,-5.294004,-5.294004,-5.29379,-5.29379,-5.293415,-5.294292,-5.29439,-5.293053,-5.295088,-5.294293,-5.294065,-5.293687,-5.293548,-5.293754,-5.293658,-5.293691,-5.293768,-5.293672,-5.293548,-5.293585,-5.293554,-5.293591,-5.293635,-5.293627,-5.293606,-5.293635,-5.293786,-5.29362,-5.293694,-5.293564,-5.293759,-5.293653,-5.293702,-5.293606,-5.293698,-5.29365,-5.293655,-5.293636,-5.293696,-5.293613,-5.293662,-5.293648,-5.293597,-5.293798,-5.293705,-5.293528,-5.293628,-5.29361,-5.293818,-5.293586,-5.293747,-5.293566,-5.29361,-5.293778,-5.293846,-5.293589,-5.293834,-5.293671,-5.293671,-5.29374,-5.293653,-5.293813,-5.293532,-5.293808,-5.293808,-5.293722,-5.293841,-5.293798,-5.29378,-5.293577,-5.293678,-5.293797,-5.293841,-5.293071,-5.293196,-5.29342,-5.293605,-5.293745,-5.293777,-5.293374,-5.296421,-5.296421,-5.292666,-5.291036,-5.291036,-5.292238,-5.293415,-5.293248,-5.293293,-5.293292,-5.293396,-5.29318,-5.293247,-5.293239,-5.293381,-5.293531,-5.293629,-5.293764,-5.293753,-5.293729,-5.293771,-5.293693,-5.293693,-5.29382,-5.29382,-5.293248,-5.293248,-5.293846,-5.294005,-5.293842,-5.293842,-5.293707,-5.293807,-5.293807,-5.293822,-5.293946,-5.293907,-5.293937,-5.293876,-5.294038,-5.293812,-5.293962,-5.293996,-5.293918,-5.293997,-5.293952,-5.294451,-5.293918,-5.294001,-5.293864,-5.293973,-5.293891,-5.293921,-5.293997,-5.293979,-5.293983,-5.293926,-5.29395,-5.293947,-5.29397,-5.293934,-5.29395,-5.293961,-5.29344,-5.293343,-5.293242,-5.293242,-5.293268,-5.293285,-5.293732,-5.293701,-5.29358,-5.293734,-5.293414,-5.293725,-5.293812,-5.293812,-5.29429,-5.29429,-5.293613,-5.293613,-5.297813,-5.297813,-5.293516,-5.293428,-5.293987,-5.294198,-5.293296,-5.293296,-5.294162,-5.293436,-5.29326,-5.29326,-5.2936,-5.293766,-5.293921,-5.293532,-5.293613,-5.293558,-5.293398,-5.293469,-5.293536,-5.293341,-5.293592,-5.293344,-5.293821,-5.293411,-5.293483,-5.293346,-5.29375,-5.293516,-5.293694,-5.293848,-5.293742,-5.293955,-5.293515,-5.293526,-5.293763,-5.296919,-5.294647,-5.294784,-5.294518,-5.293549,-5.293756,-5.293828,-5.293943,-5.293662,-5.293548,-5.293745,-5.293681,-5.29371,-5.293741,-5.293602,-5.293546,-5.293655,-5.293715,-5.293806,-5.293633,-5.293673,-5.293717,-5.293698,-5.293665,-5.293682,-5.293691,-5.293647,-5.293183,-5.293798,-5.293743,-5.293753,-5.293589,-5.293697,-5.293752,-5.293473,-5.293473,-5.293663,-5.29371,-5.293684,-5.293463,-5.293719,-5.293729,-5.294759,-5.293094,-5.293549,-5.293619,-5.293576,-5.29435,-5.293388,-5.293832,-5.293672,-5.293717,-5.293717,-5.293895,-5.293895,-5.29369,-5.293731,-5.293712,-5.293719,-5.293669,-5.294031,-5.293658,-5.293944,-5.293775,-5.293853,-5.293797,-5.29377,-5.294075,-5.294067,-5.294085,-5.293789,-5.293844,-5.293736,-5.293622,-5.293607,-5.293607,-5.293565,-5.293696,-5.293696,-5.293811,-5.293653,-5.293768,-5.293798,-5.293232,-5.293412,-5.293286,-5.293328,-5.293795,-5.293436,-5.293833,-5.293736,-5.293763,-5.293852,-5.293747,-5.293791,-5.293772,-5.293757,-5.293749,-5.293585,-5.293838,-5.293989,-5.294136,-5.293665,-5.29374,-5.293753,-5.29337,-5.29337,-5.293176,-5.293335,-5.293029,-5.294203,-5.293652,-5.293936,-5.29382,-5.293243,-5.293236,-5.293286,-5.29323,-5.293358,-5.293391,-5.293213,-5.293263,-5.29317,-5.293633,-5.293608,-5.293815,-5.29333,-5.293812,-5.293877,-5.293572,-5.29361,-5.29366,-5.293851,-5.293523,-5.293691,-5.293703,-5.293929,-5.293807,-5.294089,-5.294085,-5.294136,-5.29408,-5.294132,-5.29404,-5.294083,-5.294114,-5.294026,-5.293932,-5.293958,-5.293671,-5.293836,-5.293718,-5.293816,-5.293816,-5.293764,-5.293652,-5.294028,-5.294028,-5.361015,-5.29382,-5.293653,-5.293587,-5.293587,-5.293499,-5.29435,-5.29435,-5.293255,-5.293592,-5.293447,-5.140422,-5.140422,-5.293563,-5.293575,-5.293616,-5.29349,-5.293919,-5.293992,-5.29378,-5.293748,-5.293616,-5.293701,-5.293712,-5.293644,-5.293524,-5.2938,-5.293661,-5.293696,-5.293655,-5.293681,-5.293672,-5.293458,-5.293635,-5.293664,-5.293699,-5.293673,-5.293777,-5.293612,-5.293614,-5.293639,-5.293606,-5.293597,-5.293699,-5.293658,-5.293721,-5.293661,-5.293763,-5.293677,-5.293739,-5.293687,-5.293717,-5.293599,-5.293644,-5.293651,-5.293569,-5.293556,-5.293556,-5.293935,-5.293223,-5.293915,-5.293915,-5.293616,-5.293712,-5.293452,-5.293372,-5.293853,-5.293664,-5.293765,-5.293564,-5.293564,-5.293896,-5.293397,-5.293478,-5.293714,-5.293677,-5.293677,-5.29396,-5.29396,-5.293672,-5.293794,-5.293794,-5.29331,-5.29331,-5.292383,-5.292383,-5.293748,-5.293643,-5.293643,-5.293541,-5.293967,-5.293815,-5.293941,-5.293941,-5.294122,-5.293604,-5.293604,-5.293766,-5.293838,-5.294069,-5.293849,-5.293827,-5.293808,-5.293901,-5.293703,-5.29371,-5.293815,-5.296437,-5.294036,-5.294004,-5.293761,-5.293749,-5.293908,-5.293795,-5.293681,-5.293779,-5.293682,-5.293427,-5.293204,-5.293829,-5.293829,-5.29388,-5.293681,-5.293579,-5.293768,-5.293768,-5.293781,-5.293953,-5.293818,-5.293892,-5.293892,-5.293838,-5.294082,-5.294082,-5.293769,-5.293769,-5.293955,-5.293795,-5.293942,-5.293942,-5.293746,-5.293746,-5.29369,-5.29369,-5.293621,-5.296263,-5.293635,-5.293568,-5.293456,-5.293809,-5.293712,-5.293701,-5.293708,-5.293738,-5.29373,-5.293666,-5.293633,-5.293702,-5.293568,-5.293663,-5.293728,-5.293731,-5.293609,-5.29375,-5.293582,-5.293764,-5.29361,-5.293618,-5.293739,-5.293699,-5.29393,-5.293782,-5.293797,-5.293648,-5.293635,-5.293612,-5.293645,-5.293618,-5.293851,-5.293521,-5.293505,-5.293505,-5.293688,-5.293803,-5.293818,-5.293629,-5.292973,-5.293535,-5.293535,-5.293668,-5.29363,-5.293657,-5.293537,-5.293709,-5.29373,-5.293639,-5.293496,-5.293739,-5.293837,-5.293993,-5.293833,-5.293738,-5.293727,-5.293772,-5.293708,-5.293632,-5.293664,-5.293873,-5.293649,-5.293664,-5.293742,-5.293706,-5.293926,-5.293813,-5.293776,-5.29377,-5.293769,-5.293547,-5.293669,-5.293577,-5.293517,-5.293521,-5.293712,-5.293683,-5.293633,-5.29354,-5.293609,-5.293635,-5.293561,-5.293488,-5.293487,-5.293648,-5.293654,-5.293611,-5.293645,-5.293584,-5.293603,-5.29372,-5.29354,-5.293602,-5.293727,-5.293727,-5.293676,-5.293765,-5.293814,-5.293705,-5.293685,-5.293635,-5.29375,-5.294067,-5.29373,-5.29373,-5.291698,-5.291698,-5.294026,-5.293788,-5.29405,-5.294101,-5.293993,-5.2936,-5.293625,-5.2935,-5.293319,-5.293776,-5.293995,-5.293723,-5.293733,-5.293953,-5.293953,-5.293787,-5.293787,-5.293644,-5.293901,-5.293625,-5.293663,-5.293888,-5.293746,-5.293746,-5.294123,-5.293798,-5.294354,-5.293784,-5.291687,-5.291687,-5.293574,-5.29322,-5.293697,-5.293697,-5.293398,-5.29383,-5.293774,-5.293869,-5.293903,-5.2938,-5.2939,-5.293766,-5.293686,-5.293835,-5.293913,-5.293702,-5.293592,-5.293577,-5.293886,-5.293701,-5.293864,-5.293714,-5.293738,-5.293782,-5.293656,-5.293663,-5.293922,-5.293918,-5.293625,-5.2937,-5.2937,-5.293465,-5.293664,-5.293653,-5.294074,-5.294074,-5.293878,-5.293611,-5.293731,-5.293839,-5.293842,-5.2937,-5.293753,-5.293808,-5.293762,-5.293707,-5.293887,-5.29397,-5.29379,-5.293554,-5.293855,-5.293955,-5.293726,-5.293796,-5.29375,-5.293749,-5.293667,-5.293664,-5.293702,-5.293647,-5.293706,-5.293691,-5.29372,-5.29365,-5.293717,-5.293717,-5.293746,-5.293677,-5.293732,-5.293774,-5.293775,-5.293802,-5.293685,-5.29375,-5.293695,-5.293703,-5.293716,-5.293964,-5.293964,-5.29478,-5.293625,-5.293785,-5.293785,-5.293664,-5.293755,-5.293714,-5.293762,-5.293762,-5.293831,-5.293831,-5.294106,-5.293616,-5.293616,-5.293739,-5.293739,-5.293645,-5.293717,-5.293717,-5.293746,-5.293815],2,null,null,{"interactive":true,"className":"","stroke":true,"color":"purple","weight":5,"opacity":0.5,"fill":true,"fillColor":"purple","fillOpacity":0.2},null,null,["function (stamp = date(), prefix = \"##------ \", suffix = \" ------##\", ","    quiet = FALSE) ","{","    stamp <- paste0(prefix, stamp, suffix)","    .External2(C_addhistory, stamp)","    if (!quiet) ","        cat(stamp, sep = \"\\n\")","    invisible(stamp)","}"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[50.181923,50.334026],"lng":[-5.361015,-5.140422]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>The cat with the tag Gracie_2 was found to be the cat with the highest ground speed in this study. Her location information is plotted in a simple leaflet map. She appears to reside in Camborne mainly but can be found in the surrounding areas as well.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
