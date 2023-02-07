@@ -2,6 +2,10 @@ project:
   type: website
 
 website:
+  comments: 
+    hypothesis: 
+      theme: clean
+      openSidebar: false
   title: "Steven Howley"
   navbar:
     left:
