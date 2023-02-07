@@ -1,5 +1,7 @@
 ---
 title: "Rats!"
+author: "Steven Howley"
+date: "2023-02-06"
 image: "ratty.jpg"
 editor: visual 
 html:
