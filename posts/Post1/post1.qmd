@@ -66,6 +66,7 @@ g+theme_bw()
 The survival curves illustrate the different survival outcomes between rats in the control group, trt=0, and those who received treatment, trt=1. To determine whether the hazard functions of the 2 groups are statistically significant, a log-rank test is performed, and the resulting p-value provides sufficient evidence to reject the null hypotheses, implying that treatment was effective.
 
 ```{r}
+#| echo: false
 #| message: false
 #| warning: false
 

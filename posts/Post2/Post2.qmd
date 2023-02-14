@@ -98,6 +98,7 @@ leaflet()%>%
 The cat with the tag Gracie_2 was found to be the cat with the highest ground speed in this study. Her location information is plotted in a simple leaflet map. She appears to reside in Camborne mainly but can be found in the surrounding areas as well.
 
 ```{r}
+#| echo: false
 #| message: false
 #| warning: false
 

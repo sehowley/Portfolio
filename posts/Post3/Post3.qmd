@@ -11,6 +11,11 @@ categories: [Analysis, Tables, IKEA]
 ---
 
 ```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
 library(tidyverse)
 library(gt)
 library(gtExtras)
@@ -19,6 +24,11 @@ library(DT)
 ```
 
 ```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
 ds<-read_csv("IKEA_SA_Furniture_Web_Scrapings_sss.csv")
 
 tableds<-ds %>%
@@ -77,6 +87,7 @@ datatable(filter = "top")
 ```
 
 ```{r}
+#| echo: false
 #| message: false
 #| warning: false
 
