@@ -1,13 +1,13 @@
 ---
-title: "Cats!"
+title: "Tables of Tables"
 author: "Steven Howley"
-date: "2023-02-06"
-image: "catty.jpeg"
+date: "2023-02-13"
+image: "t1.webp"
 editor: visual 
 html:
   code-fold: true
   code-summary: "Show the code"
-categories: [Analysis, Tidy Tuesday]
+categories: [Analysis, Tables, IKEA]
 ---
 
 ```{r}
@@ -15,6 +15,7 @@ library(tidyverse)
 library(gt)
 library(gtExtras)
 library(glue)
+library(DT)
 ```
 
 ```{r}
@@ -25,7 +26,7 @@ tableds<-ds %>%
   select(-category,-...1,-old_price) %>%
   mutate(price_usd=round(price*0.266,2)) %>% # Conversion rate from SR to USD 4/24/2020
   arrange(desc(price)) %>%
-  select(-price)
+  select(-price) %>%
   head(10)
   
 tableds
@@ -60,5 +61,18 @@ tableds %>%
                 height,
                 width)
   ) 
+```
+
+```{r}
+tableds1<-ds %>%
+  filter(category=="Tables & desks") %>%
+  select(-category,-...1,-old_price) %>%
+  mutate(price_usd=round(price*0.266,2)) %>% # Conversion rate from SR to USD 4/24/2020
+  arrange(desc(price)) %>%
+  select(-price)
+
+
+tableds1 %>%
+datatable(filter = "top")
 ```
 

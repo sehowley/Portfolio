@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Post3/Post3.html",
       "/posts/Post1/post1.html",
-      "/posts/Post2/Post2.html",
-      "/posts/Post3/Post3.html"
+      "/posts/Post2/Post2.html"
     ]
   }
 ]
