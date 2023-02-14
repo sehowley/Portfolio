@@ -10,6 +10,16 @@ html:
 categories: [Analysis, Tables, IKEA]
 ---
 
+A generated poem about giraffes:
+
+Tall and graceful, gentle and serene Giraffes stand tall, their beauty so pristine With long necks and spots of gold They move with grace, so uncontrolled
+
+In savannas they roam, on legs so thin Their heads held high, with a regal spin Their eyes so kind, their hearts so pure Giraffes are creatures we must adore
+
+They graze on leaves, their favorite feast With tongues so long, they reach the least Their steps so light, their gait so slow They steal our hearts, with every show
+
+Giraffes, oh giraffes, majestic and rare In our minds, you'll always have a share With your beauty so grand, and your hearts so true We'll always be in awe of you.
+
 ```{r}
 #| echo: false
 #| include: false
@@ -21,6 +31,7 @@ library(gt)
 library(gtExtras)
 library(glue)
 library(DT)
+library(dplyr)
 ```
 
 ```{r}
@@ -37,6 +48,9 @@ tableds<-ds %>%
   mutate(price_usd=round(price*0.266,2)) %>% # Conversion rate from SR to USD 4/24/2020
   arrange(desc(price)) %>%
   select(-price) %>%
+  relocate(
+    price_usd, .before = sellable_online 
+  ) %>%
   head(10)
   
 tableds
@@ -70,13 +84,14 @@ tableds %>%
     columns = c(depth,
                 height,
                 width)
-  ) 
+  ) %>%
+  gt_theme_dot_matrix()
 ```
 
 ```{r}
 tableds1<-ds %>%
   filter(category=="Tables & desks") %>%
-  select(-category,-...1,-old_price) %>%
+  select(-...1,-old_price) %>%
   mutate(price_usd=round(price*0.266,2)) %>% # Conversion rate from SR to USD 4/24/2020
   arrange(desc(price)) %>%
   select(-price)
