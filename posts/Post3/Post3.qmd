@@ -76,3 +76,9 @@ tableds1 %>%
 datatable(filter = "top")
 ```
 
+```{r}
+#| message: false
+#| warning: false
+
+knitr::write_bib(names(sessionInfo()$otherPkgs), file="bibliography.bib")
+```

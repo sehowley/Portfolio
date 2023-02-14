@@ -3,10 +3,6 @@ project:
   output-dir: _site
 
 website:
-  comments: 
-    hypothesis: 
-      theme: clean
-      openSidebar: false
   title: "Steven Howley"
   navbar:
     left:
