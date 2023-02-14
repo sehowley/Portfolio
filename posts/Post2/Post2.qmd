@@ -9,8 +9,8 @@ html:
   code-summary: "Show the code"
 categories: [Analysis, Tidy Tuesday]
 ---
-Where does the fastest cat in the UK like to hang out?
 
+Where does the fastest cat in the UK like to hang out?
 
 Credit to: Kays R, Dunn RR, Parsons AW, Mcdonald B, Perkins T, Powers S, Shell L, McDonald JL, Cole H, Kikillus H, Woods L, Tindle H, Roetman P (2020) The small home ranges and large local ecological impacts of pet cats. Animal Conservation. doi:10.1111/acv.12563
 

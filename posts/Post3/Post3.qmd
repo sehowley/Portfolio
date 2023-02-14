@@ -1,0 +1,64 @@
+---
+title: "Cats!"
+author: "Steven Howley"
+date: "2023-02-06"
+image: "catty.jpeg"
+editor: visual 
+html:
+  code-fold: true
+  code-summary: "Show the code"
+categories: [Analysis, Tidy Tuesday]
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+library(gtExtras)
+library(glue)
+```
+
+```{r}
+ds<-read_csv("IKEA_SA_Furniture_Web_Scrapings_sss.csv")
+
+tableds<-ds %>%
+  filter(category=="Tables & desks") %>%
+  select(-category,-...1,-old_price) %>%
+  mutate(price_usd=round(price*0.266,2)) %>% # Conversion rate from SR to USD 4/24/2020
+  arrange(desc(price)) %>%
+  select(-price)
+  head(10)
+  
+tableds
+```
+
+```{r}
+#names(tableds)
+
+tableds %>%
+  gt() %>%
+  tab_header(
+    title = "IKEA Tables and Desks Saudi Arabia",
+    subtitle = "Top 10 Most Expensive Tables as of 4/20/2020"
+  ) %>%
+  fmt_currency(
+    columns = price_usd,
+    currency = "USD"
+  ) %>%
+  cols_label(item_id="ID",
+             name="Name",
+             sellable_online="Sellable Online",
+             link="Link",
+             other_colors="Other Colors",
+             short_description="Description",
+             designer="Designer",
+             depth="Depth",
+             height="Height",
+             width="Width") %>%
+  tab_spanner(
+    label="Dimensions",
+    columns = c(depth,
+                height,
+                width)
+  ) 
+```
+
