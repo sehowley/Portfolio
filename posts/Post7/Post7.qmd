@@ -1,0 +1,43 @@
+---
+title: "Cool graphs about elevators"
+author: Mike Mahoney
+subtitle: "Last generated on: 2022-08-04"
+date: today
+format: 
+  html: 
+    echo: false
+params: 
+  cyl: "NA"
+---
+
+```{r}
+#| message: false
+
+if (!is.na(params$cyl) && params$cyl != "NA") {
+  cars <- cars[cars$cyl == params$cyl, ]
+}
+if (nrow(cars) == 0) {
+  stop("No cars were selected. Did you misspell `car`?")
+}
+
+library(ggplot2)
+theme_set(theme_minimal())
+```
+
+## Weight vs. MPG
+
+```{r}
+#| message: false
+#| warning: false
+ggplot(data=mtcars, aes(wt, mpg))+
+  geom_point()+
+  theme_minimal()+
+  geom_smooth()+
+  labs(
+    title = "The Effect of Weight on MPG",
+    subtitle = "From mtcars",
+    xlab("Weight"),
+    ylab("MPG")
+  )
+```
+

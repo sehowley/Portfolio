@@ -1,0 +1,42 @@
+---
+title: "Chickens"
+author: Steven Howley
+date: today
+format:
+  html:
+    echo: false
+---
+
+```{r}
+library(ggplot2)
+library(gt)
+library(gtExtras)
+library(glue)
+library(DT)
+library(dplyr)
+data("mtcars")
+cars<-force(mtcars)
+
+```
+
+```{r}
+ggplot(data=mtcars, aes(wt, mpg))+
+  geom_point()+
+  theme_minimal()+
+  geom_smooth()+
+  labs(
+    title = "The Effect of Weight on MPG",
+    subtitle = "From mtcars",
+    xlab("Weight"),
+    ylab("MPG")
+  )
+```
+
+```{r}
+cartable<- cars %>%
+  select(wt, mpg)
+  gt(cars) 
+  
+cartable
+```
+
