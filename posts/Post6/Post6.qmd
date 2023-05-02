@@ -1,0 +1,145 @@
+---
+title: "Data Science Presentation"
+author: "Steven Howley"
+image: "black_cat_with_spotted_toes_2.png"
+execute:
+  echo: false
+format: 
+  revealjs: 
+    multiplex: true
+    theme: serif
+    transition: convex
+    background-transition: fade
+    preview-links: true
+    scrollable: true
+    slide-number: c/t
+    code-fold: true
+    #embed-resources: true
+    incremental: true
+---
+
+## Path to Data Science {.smaller}
+
+- Studied and graduated with a degree in Mathematics at Willamette University from 2018-2022.
+- Always have had an interest in pure math, professors/mentors and coursework guided me to explore statistics where I gained an appreciation for modeling. 
+-Coding was encouraged during this time, I found that I really like using R and have since gained proficiency in Python and SQL. 
+-Choosing the path of data science seemed like a natural extension of what I had been studying as well as a way to express my creativity.
+- Began a Masters of Data Science program in the summer of 2022 also at Willamette. Graduating August 2023.
+- Providing insight gathered from evidence is what excites me the most about data science.
+
+# My Data Science Projects 
+
+## Where does the fastest cat in the UK like to hang out? {.smaller}
+
+![Map](catty.jpeg)
+
+## Leaflet Fun {.smaller}
+:::: {.columns}
+
+::: {.column width="80%"}
+
+![Map](catmap.png)
+
+-Conducted a light analysis on a fun UK cat dataset, which lent itself well to being used with a leaflet.
+
+:::
+
+::: {.column width="20%"}
+
+<a href="https://stevenhowley.netlify.app/posts/post2/post2">Cats!</a>
+
+:::
+
+::::
+
+## Survival Analysis {.smaller}
+
+![Map](ratty.jpg)
+
+## Kaplan Meier Curve {.smaller}
+:::: {.columns}
+
+::: {.column width="80%"}
+
+![Map](kmcurveex.png)
+
+-Credit to MH Gail, TJ Santner, and CC Brown (1980). "An analysis of comparative carcinogenesis experiments based on multiple times to tumor". Biometrics 36, 255–266. Survival analysis techniques were used to produce a Kaplan-Meier curve corresponding to this study.
+
+:::
+
+::: {.column width="20%"}
+
+<a href="https://stevenhowley.netlify.app/posts/post1/post1">Rats!</a>
+
+:::
+
+::::
+
+## Tabular Data {.smaller}
+
+![Map](t1.webp)
+
+## Ikea's Most Expensive Tables {.smaller}
+:::: {.columns}
+
+::: {.column width="80%"}
+
+![Map](table.png)
+
+-A gt table of tables.
+
+:::
+
+::: {.column width="20%"}
+
+<a href="https://stevenhowley.netlify.app/posts/post3/post3">Tables of Tables</a>
+
+:::
+
+::::
+
+## More Interactivity {.smaller}
+
+![Map](bfro.jpg)
+
+## Tidy Tuesday Pull {.smaller}
+:::: {.columns}
+
+::: {.column width="80%"}
+
+![Map](map.png)
+
+-An interactive map of bigfoot sightings.
+
+:::
+
+::: {.column width="20%"}
+
+<a href="https://stevenhowley.netlify.app/posts/post5/post5">Interactive Graphic with Leaflet</a>
+
+:::
+
+::::
+
+## Still More Interactivity {.smaller}
+
+![Map](covid.jpg)
+
+## Covid Analysis {.smaller}
+:::: {.columns}
+
+::: {.column width="80%"}
+
+![Map](interg.png)
+
+-An interactive graph of displaying each state and the percent of its population vaccinated as of July 2021.
+
+:::
+
+::: {.column width="20%"}
+
+<a href="https://stevenhowley.netlify.app/posts/post4/post4">Interactive Graphic with ggiraph</a>
+
+:::
+
+::::
