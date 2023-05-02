@@ -1,0 +1,98 @@
+---
+title: "Interactive Graphic with ggiraph"
+subtitle: "Covid Percent Vaccination by state as of July 2021"
+author: "Steven Howley"
+date: "2023-02-13"
+image: "covid.jpg"
+editor: visual 
+html:
+  code-fold: false
+  code-summary: "Show the code"
+categories: [Interactive]
+---
+
+This data is from the Our World in Data Github repository. The package ggiraph was used to create a simple interactive graphic to describe the rates of Covid-19 vaccination per 100 people per state.
+
+```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(ggplot2)
+library(ggiraph)
+library(patchwork)
+```
+
+```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
+data_url <- "https://github.com/owid/covid-19-data/raw/master/public/data/vaccinations/us_state_vaccinations.csv"
+
+all_data <- read.csv(data_url)
+all_data$location[all_data$location == "New York State"] <- "New York"
+```
+
+```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
+not_states_or_dc <- c("American Samoa", "Bureau of Prisons", 
+  "Dept of Defense", "Federated States of Micronesia", "Guam", 
+  "Indian Health Svc", "Long Term Care", "Marshall Islands", 
+  "Northern Mariana Islands", "Puerto Rico", "Republic of Palau", 
+  "United States", "Veterans Health", "Virgin Islands")
+```
+
+```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
+bar_graph_data_recent <- all_data %>%  
+  filter(date == max(date), !(location %in% not_states_or_dc)) %>%  
+  mutate(
+   PctFullyVaccinated = round(people_fully_vaccinated_per_hundred, 1)  
+  ) %>%  
+  select(State = location, PctFullyVaccinated)
+
+# A cool trick to make the tooltip work better
+
+bar_graph_data_recent <- bar_graph_data_recent %>%
+  mutate(
+    tooltip_text = paste0(toupper(State), "\n", 
+                   PctFullyVaccinated, "%")
+  )
+
+```
+
+```{r}
+#| echo: false
+#| include: true
+#| message: false
+#| warning: false
+
+latest_vax_graph <- ggplot(bar_graph_data_recent, 
+                aes(x = reorder(State, PctFullyVaccinated), 
+                    y = PctFullyVaccinated,
+                    tooltip = tooltip_text, data_id = State #<<
+                    )) +
+  geom_col_interactive(color = "pink", fill="purple4", size = 0.5) +  #<<
+  theme_minimal() +
+  theme(axis.text=element_text(size = 6)) +  #<<
+  labs(title = "Percent Fully Vaccinated July 2021",
+       subtitle = "Data from Our World in Data GitHub repo"
+       ) +
+   ylab("") +
+   xlab("") +
+  coord_flip()
+
+girafe(ggobj = latest_vax_graph, width_svg = 5, height_svg = 4)
+```
