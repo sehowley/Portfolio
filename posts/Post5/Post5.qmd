@@ -1,0 +1,48 @@
+---
+title: "Interactive Graphic with leaflet"
+subtitle: "Where is Bigfoot, what is it doing?"
+author: "Steven Howley"
+date: "2023-02-13"
+image: "bfro.jpg"
+editor: visual 
+html:
+  code-fold: false
+  code-summary: "Show the code"
+categories: [Interactive]
+---
+
+Data from the BFRO. Below is a map with coordinates of all bigfoot sightings since 1950, with text descriptions for each point. Look around and see what Bigfoot is up to!
+
+```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(leaflet)
+library(leaflet.extras)
+```
+
+```{r}
+#| echo: false
+#| include: false
+#| message: false
+#| warning: false
+
+bigfoot <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-09-13/bigfoot.csv')
+```
+
+```{r}
+#| echo: false
+#| include: true
+#| message: false
+#| warning: false
+
+leaflet()%>% 
+  addProviderTiles("CartoDB.DarkMatter") %>% 
+  setView(
+lat=44.96990001882358, lng=-122.50025697170916,
+zoom=5) %>%
+  addCircles(lng=bigfoot$longitude, lat=bigfoot$latitude, radius=10, color="pink", popup=bigfoot$observed)
+```
