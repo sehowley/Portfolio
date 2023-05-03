@@ -1,0 +1,10 @@
+library(quarto)
+library(dplyr)
+cyl.analyzer <- function(x) {
+  quarto_render("Post7.qmd", 
+                execute_params = list(cyl = x), 
+                output_file = paste0("Cyl-",x,".html"))
+}
+
+cylinders <- data.frame(cyl = c(4L,6L,8L))
+cylinders$cyl %>% map(., function(x) {cyl.analyzer(x)})

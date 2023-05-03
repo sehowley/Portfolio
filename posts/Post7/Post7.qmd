@@ -1,35 +1,25 @@
 ---
-title: "Cool graphs about elevators"
-author: Mike Mahoney
-subtitle: "Last generated on: 2022-08-04"
-date: today
-format: 
-  html: 
-    echo: false
+title: "Cool Cars"
+author: "Steven"
+format:
+   html:
+     embed-resources: true
 params: 
-  cyl: "NA"
+    cyl: 4
 ---
-
-```{r}
-#| message: false
-
-if (!is.na(params$cyl) && params$cyl != "NA") {
-  cars <- cars[cars$cyl == params$cyl, ]
-}
-if (nrow(cars) == 0) {
-  stop("No cars were selected. Did you misspell `car`?")
-}
-
-library(ggplot2)
-theme_set(theme_minimal())
-```
 
 ## Weight vs. MPG
 
 ```{r}
 #| message: false
 #| warning: false
-ggplot(data=mtcars, aes(wt, mpg))+
+library(ggplot2)
+library(quarto)
+library(purrr)
+
+mtcars %>% 
+  dplyr::filter(cyl == params$cyl) |>
+ggplot(aes(wt, mpg)) +
   geom_point()+
   theme_minimal()+
   geom_smooth()+
@@ -41,3 +31,10 @@ ggplot(data=mtcars, aes(wt, mpg))+
   )
 ```
 
+
+```{r, message=FALSE, warning=FALSE}
+library(skimr)
+mtcars |> 
+  dplyr::filter(cyl == params$cyl) |>
+  skim()
+```
